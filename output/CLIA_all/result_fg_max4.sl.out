@@ -1,0 +1,2 @@
+unsat
+(define-fun max4 ((x Int) (y Int) (z Int) (w Int)) Int (let ((_let_0 (+ x (* -1 y)))) (let ((_let_1 (* -1 z))) (let ((_let_2 (+ x _let_1))) (let ((_let_3 (* -1 w))) (let ((_let_4 (+ y _let_1))) (ite (and (>= _let_0 0) (>= _let_2 0) (>= (+ x _let_3) 0)) x (ite (and (not (>= _let_0 1)) (>= _let_4 0) (>= (+ y _let_3) 0)) y (ite (and (not (>= _let_2 1)) (not (>= _let_4 1)) (>= (+ z _let_3) 0)) z w)))))))))

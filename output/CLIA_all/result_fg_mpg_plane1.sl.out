@@ -1,0 +1,2 @@
+unsat
+(define-fun eq1 ((x Int) (y Int) (z Int)) Int (+ x y))

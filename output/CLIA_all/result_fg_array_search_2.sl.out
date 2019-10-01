@@ -1,0 +1,2 @@
+unsat
+(define-fun findIdx ((y1 Int) (y2 Int) (k1 Int)) Int (let ((_let_0 (* -1 k1))) (let ((_let_1 (+ y2 _let_0))) (let ((_let_2 (+ y1 _let_0))) (ite (>= (+ y1 (* -1 y2)) 0) 0 (ite (not (>= _let_1 0)) 2 (ite (or (>= _let_2 0) (not (>= _let_1 1))) 0 (ite (not (>= _let_2 1)) 1 2))))))))

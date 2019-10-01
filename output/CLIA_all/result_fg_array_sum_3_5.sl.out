@@ -1,0 +1,2 @@
+unsat
+(define-fun findSum ((y1 Int) (y2 Int) (y3 Int)) Int (let ((_let_0 (+ y1 y2))) (let ((_let_1 (>= _let_0 6))) (let ((_let_2 (not _let_1))) (let ((_let_3 (+ y2 y3))) (let ((_let_4 (>= _let_3 6))) (ite (and _let_2 (or _let_1 (not _let_4))) 0 (ite (and (or _let_2 (= y1 y3)) (or _let_1 _let_4 (= y2 (* -1 y3)))) _let_3 _let_0))))))))

@@ -1,0 +1,2 @@
+unsat
+(define-fun eq1 ((x Int) (y Int) (z Int)) Int (let ((_let_0 (>= (+ x y) 1))) (let ((_let_1 (>= (+ x z) 1))) (let ((_let_2 (= x y))) (let ((_let_3 (not _let_0))) (let ((_let_4 (>= (+ y z) 1))) (let ((_let_5 (not _let_4))) (let ((_let_6 (and _let_2 _let_5))) (ite (or (and _let_0 (or _let_1 _let_6)) (and _let_3 (or (and (= x z) _let_4) _let_6))) (+ 1 x) (ite (or (and _let_0 (or (and _let_2 _let_4) (not _let_1))) (and _let_3 (or (and (= y z) (>= z 1)) _let_5))) (+ 1 y) (+ 1 z)))))))))))

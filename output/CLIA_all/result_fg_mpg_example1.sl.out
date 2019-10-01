@@ -1,0 +1,2 @@
+unsat
+(define-fun ex ((x Int) (y Int)) Int (let ((_let_0 (>= x 5))) (ite (or _let_0 (and (not _let_0) (= (* 2 x) (+ -16 (* -3 y))))) (+ 17 (* 5 x) (* 3 y)) (+ 1 (* 3 x)))))

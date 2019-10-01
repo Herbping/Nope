@@ -1,0 +1,2 @@
+unsat
+(define-fun findSum ((y1 Int) (y2 Int)) Int (let ((_let_0 (+ y1 y2))) (ite (not (>= _let_0 6)) 0 _let_0)))

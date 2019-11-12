@@ -3,7 +3,7 @@ grammar Sygus;
 start       :   prog
             ;
 
-prog        :   setWeightCmd cmdPlus
+prog        :   setWeightCmd cmdPlus 
             ;
 
 setLogicCmd :   '(' 'set-logic' SYMBOL ')'

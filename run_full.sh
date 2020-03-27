@@ -1,16 +1,16 @@
 #! /bin/sh
 benchmark_plus_1=(
-	#mpg_guard1
-	#mpg_guard2
-	#mpg_guard3
-	#mpg_guard4
+	mpg_guard1
+	mpg_guard2
+	mpg_guard3
+	mpg_guard4
 )
 benchmark_plus_2=(
-	#mpg_plane1
+	mpg_plane1
 )
 
 benchmark_plus_3=(
-	#mpg_plane3
+	mpg_plane3
 	mpg_plane2
 	mpg_ite1
 	mpg_ite2

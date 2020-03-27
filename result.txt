@@ -1,0 +1,10 @@
+Category: limitedPlus
+
+benchmarks/CLIA_Track_PLUS_Pos/mpg_plane1/grammar.sl	4.82510399818	Unrealizable
+Category: limitedIf
+
+benchmarks/CLIA_Track_IF/fg_max2/grammar.sl	1.85743093491	Unrealizable
+benchmarks/CLIA_Track_IF/fg_max3/grammar.sl
+benchmarks/CLIA_Track_IF/fg_sum_2_5/grammar.sl
+benchmarks/CLIA_Track_IF/fg_sum_2_15/grammar.sl
+benchmarks/CLIA_Track_IF/fg_sum_3_5/grammar.sl

@@ -1,6 +1,6 @@
 #! /bin/sh
 benchmark_plus_2=(
-	#mpg_plane1
+	mpg_plane1
 )
 
 currenttime=`date +"%d%H%M"`
@@ -22,19 +22,19 @@ for s in "${benchmark_plus_2[@]}"; do
 done
 
 benchmark_if=(
-#fg_max2
-#fg_max3
-#fg_sum_2_5
-#fg_sum_2_15
-#fg_sum_3_5
-#fg_sum_3_15
-#search_2
-#fg_mpg_example1
-#fg_guard1
-#fg_guard2
-#fg_guard3
-#fg_guard4
-#fg_mpg_ite1
+fg_max2
+fg_max3
+fg_sum_2_5
+fg_sum_2_15
+fg_sum_3_5
+fg_sum_3_15
+search_2
+fg_mpg_example1
+fg_guard1
+fg_guard2
+fg_guard3
+fg_guard4
+fg_mpg_ite1
 )
 
 path="benchmarks/CLIA_Track_IF/"

@@ -1,17 +1,17 @@
 #! /bin/sh
 benchmark_plus_1=(
-	mpg_guard1
-	mpg_guard2
-	mpg_guard3
-	mpg_guard4
+	#mpg_guard1
+	#mpg_guard2
+	#mpg_guard3
+	#mpg_guard4
 )
 benchmark_plus_2=(
-	mpg_plane1
+	#mpg_plane1
 )
 
 benchmark_plus_3=(
+	#mpg_plane3
 	mpg_plane2
-	mpg_plane3
 	mpg_ite1
 	mpg_ite2
 	array_sum_2_5
@@ -51,7 +51,7 @@ for s in "${benchmark_plus_1[@]}"; do
 	count=0
 	sumEx=0
 	sumT=0.0
-	for ((i=1; i<6; i++)); do
+	for ((i=1; i<2; i++)); do
 		python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  
 	done 
 
@@ -72,7 +72,7 @@ for s in "${benchmark_plus_3[@]}"; do
 	count=0
 	sumEx=0
 	sumT=0.0
-	for ((i=1; i<6; i++)); do
+	for ((i=1; i<2; i++)); do
 		python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  
 	done 
 

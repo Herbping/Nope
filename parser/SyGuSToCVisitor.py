@@ -29,7 +29,7 @@ class SygusVisitor(ParseTreeVisitor):
     regEx_term = ""
     regEx_term_star = []
     currentEx = 0
-
+    rule_count = 0
     # reg for visit term
     reg_term = ""
     reg_term_star = []
@@ -122,7 +122,7 @@ class SygusVisitor(ParseTreeVisitor):
             return ">>"
         if(symbol == "bvshl"):
             return "<<"
-        if(symbol == "+" or symbol == "-" or symbol == "*" or symbol == "/"):
+        if(symbol == "+" or symbol == "-" or symbol == "*" or symbol == "/" or symbol == ">" or symbol == "<" or symbol == ">=" or symbol == "<="):
             return symbol
         if(symbol == "and"):
             return "&&"
@@ -174,6 +174,32 @@ class SygusVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by SygusParser#cmdPlus.
     def visitCmdPlus(self, ctx):
+	self.header = ""
+    	self.result = ""
+    	self.funDef = ""
+    	self.spec = ""
+    	self.type = "int"
+    	self.inSynth = 0
+    	self.varList = []
+    	self.fundef_varlist = []
+    	self.inConstraint = 0
+
+    	self.spec_varlist = []
+
+    	self.sygus_ex = ""
+    	self.regEx_term = ""
+    	self.regEx_term_star = []
+    	self.currentEx = 0
+
+    	self.reg_term = ""
+    	self.reg_term_star = []
+    	self.synthName = ""
+    	self.findDef = 0
+
+    	self.smt_spec = ""
+    	self.regSMT_term = ""
+    	self.regSMT_term_star = []
+
         return self.visitChildren(ctx)
 
 
@@ -430,8 +456,9 @@ class SygusVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by SygusParser#gTermPlus.
     def visitGTermPlus(self, ctx):
-
-        return self.visitChildren(ctx)
+	self.rule_count += 1
+	self.visitChildren(ctx)
+        return 1
 
 
     # Visit a parse tree produced by SygusParser#checkSynthCmd.
@@ -488,7 +515,11 @@ class SygusVisitor(ParseTreeVisitor):
             while gtstar.gTerm() != None:
                 children.append(gtstar.gTerm().SYMBOL().getText())
                 gtstar = gtstar.gTermStar()
-            self.result += "\tif(__VERIFIER_nondet_int()){\n"
+	    self.rule_count-=1
+	    if self.rule_count == 0:
+		self.result += "\telse{\n"
+	    else:
+            	self.result += "\tif(__VERIFIER_nondet_int()){\n"
             for i in range(0, len(children)):
                 self.result += "\t\t" + children[len(children)-i-1] + self.get_application() + ";\n"
                 for j in range(0,self.num_ex):
@@ -507,14 +538,22 @@ class SygusVisitor(ParseTreeVisitor):
 
 
         if ctx.SYMBOL() != None:
-            self.result += "\tif(__VERIFIER_nondet_int()){\n"
+	    self.rule_count-=1
+	    if self.rule_count == 0:
+		self.result += "\telse{\n"
+	    else:
+            	self.result += "\tif(__VERIFIER_nondet_int()){\n"
             for i in range(0,self.num_ex):
                 self.result += "\t\tI_"+ str(i) + " = " + ctx.SYMBOL().getText() + "_" + str(i) +";\n"
             self.result += "\t\treturn;}\n"
             return ""
 
         if ctx.literal() != None:
-            self.result += "\tif(__VERIFIER_nondet_int()){\n"
+	    self.rule_count-=1
+	    if self.rule_count == 0:
+		self.result += "\telse{\n"
+	    else:
+            	self.result += "\tif(__VERIFIER_nondet_int()){\n"
             for i in range(0,self.num_ex):
                 if self.type == "u32":
                     self.result += "\t\tI_"+ str(i) + " = " + str(int(self.bv_to_unsigned(ctx.literal().getText()))) + ";\n"

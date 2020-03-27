@@ -1,0 +1,51 @@
+Category: limitedPlus
+
+Category: limitedIf
+
+Category: limitedConst
+
+benchmarks/CLIA_Track_Const/example1/grammar.sl	2.54829907417	Unrealizable
+benchmarks/CLIA_Track_Const/example2/grammar.sl	2.44386911392	Unrealizable
+benchmarks/CLIA_Track_Const/example3/grammar.sl	2.41975617409	Unrealizable
+benchmarks/CLIA_Track_Const/example4/grammar.sl	2.43344497681	Unrealizable
+benchmarks/CLIA_Track_Const/example5/grammar.sl	2.43121004105	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_2/grammar.sl	2.11922812462	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_3/grammar.sl	2.26040005684	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_4/grammar.sl	2.49821710587	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_5/grammar.sl	2.48674583435	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_6/grammar.sl	2.54600381851	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_7/grammar.sl	2.61205005646	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_8/grammar.sl	2.97592711449	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_9/grammar.sl	2.61842679977	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_10/grammar.sl	2.73590803146	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_11/grammar.sl	2.91011595726	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_12/grammar.sl	3.21290493011	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_13/grammar.sl	2.89355182648	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_14/grammar.sl	2.96436691284	Unrealizable
+benchmarks/CLIA_Track_Const/fg_search_15/grammar.sl	3.06306409836	Unrealizable
+benchmarks/CLIA_Track_Const/guard1/grammar.sl	2.83709383011	Unrealizable
+benchmarks/CLIA_Track_Const/guard2/grammar.sl	2.97744202614	Unrealizable
+benchmarks/CLIA_Track_Const/guard3/grammar.sl	3.10456800461	Unrealizable
+benchmarks/CLIA_Track_Const/guard4/grammar.sl	3.29955101013	Unrealizable
+benchmarks/CLIA_Track_Const/ite1/grammar.sl	3.13361215591	Unrealizable
+benchmarks/CLIA_Track_Const/ite2/grammar.sl	2.88281178474	Unrealizable
+benchmarks/CLIA_Track_Const/plane2/grammar.sl	3.90437507629	Unrealizable
+benchmarks/CLIA_Track_Const/plane3/grammar.sl	3.48023200035	Unrealizable
+benchmarks/CLIA_Track_Const/sum_2_5/grammar.sl	3.03785395622	Unrealizable
+benchmarks/CLIA_Track_Const/sum_2_15/grammar.sl	4.65218710899	Unrealizable
+benchmarks/CLIA_Track_Const/sum_3_5/grammar.sl	3.44346499443	Unrealizable
+benchmarks/CLIA_Track_Const/sum_3_15/grammar.sl	4.55849003792	Unrealizable
+benchmarks/CLIA_Track_Const/sum_4_5/grammar.sl	3.15554904938	Unrealizable
+benchmarks/CLIA_Track_Const/sum_4_15/grammar.sl	3.82565689087	Unrealizable
+benchmarks/CLIA_Track_Const/sum_5_5/grammar.sl	4.00768494606	Unrealizable
+benchmarks/CLIA_Track_Const/sum_5_15/grammar.sl	4.4442050457	Unrealizable
+benchmarks/CLIA_Track_Const/sum_6_5/grammar.sl	3.37555408478	Unrealizable
+benchmarks/CLIA_Track_Const/sum_6_15/grammar.sl	4.3315141201	Unrealizable
+benchmarks/CLIA_Track_Const/sum_7_5/grammar.sl	3.60182714462	Unrealizable
+benchmarks/CLIA_Track_Const/sum_7_15/grammar.sl	4.43566012383	Unrealizable
+benchmarks/CLIA_Track_Const/sum_8_5/grammar.sl	3.20117115974	Unrealizable
+benchmarks/CLIA_Track_Const/sum_8_15/grammar.sl	4.22984790802	Unrealizable
+benchmarks/CLIA_Track_Const/sum_9_5/grammar.sl	2.93832397461	Unrealizable
+benchmarks/CLIA_Track_Const/sum_9_15/grammar.sl	3.34637093544	Unrealizable
+benchmarks/CLIA_Track_Const/sum_10_5/grammar.sl	3.24987816811	Unrealizable
+benchmarks/CLIA_Track_Const/sum_10_15/grammar.sl	4.51569318771	Unrealizable

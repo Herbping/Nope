@@ -7,7 +7,7 @@ import glob, os
 
 # this parser parses a sygus file and reduce it to a verify problem in C
 
-def GRewritter(ex_list,inputStr):
+def GRewritter(ex_list,inputStr,ex_out_list):
     if ex_list == []:
         numEx = 1
     else:
@@ -29,15 +29,14 @@ def GRewritter(ex_list,inputStr):
     result += v.header + "\n"
     result += v.result + "\n"
     result += v.funDef + "\n"
-    result += "bool spec" + v.get_application_spec() + "{\n"
-    result += v.spec+"\n}\n"
+    #result += "bool spec" + v.get_application_spec() + "{\n"
+    #result += v.spec+"return 1;\n}\n"
     if(ex_list == []):
             temp_list = []
             for i in range(0,len(v.spec_varlist)):
                 temp_list.append("0")
             ex_list.append(temp_list)
     # main 
-    
     result += "int main(){\n"
     for i in range(0,v.num_ex):
         j = 0
@@ -47,7 +46,7 @@ def GRewritter(ex_list,inputStr):
         result +="\n"
     result += "Start" + v.get_application() +";\n"
     for i in range(0,v.num_ex):
-        result += "bool spec_out_" + str(i) + " = spec" + v.get_application_I(i)  + ";\n"
+        result += "bool spec_out_" + str(i) + " = I_" + str(i) + "==" + str(ex_out_list[i]) +";\n"
     result += "(void)(("
     for i in range(0, v.num_ex):
         result += "!spec_out_" + str(i) + "||"
@@ -67,9 +66,10 @@ def GRewritter(ex_list,inputStr):
     
     for i in range(0,len(v.spec_varlist)):
         smt_top += "(declare-fun " + v.spec_varlist[i]+"! () Int)\n"
+	smt_top += "(assert (>= "+v.spec_varlist[i] + "! 0))\n"
     smt_spec = "(assert (or "+v.smt_spec+"))\n(check-sat)\n(get-model)"
     
-    return [result, sygus_ex,smt_top,smt_spec,len(v.spec_varlist)]
+    return [result, sygus_ex,smt_top,smt_spec,len(v.spec_varlist),v.spec_varlist]
 
 
 # test

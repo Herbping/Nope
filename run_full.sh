@@ -48,46 +48,45 @@ echo "Category: limitedPlus" >> "result.txt"
 
 for s in "${benchmark_plus_1[@]}"; do
 	echo "processing $s in $path"
-	echo -n $s" & " >> $out_path
 	count=0
 	sumEx=0
 	sumT=0.0
 	for ((i=1; i<6; i++)); do
-		sudo timeout 600  python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  2>>"error_log.txt"
+		python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  
 	done 
 
 done
 for s in "${benchmark_plus_2[@]}"; do
 	echo "processing $s in $path"
-	echo -n $s" & " >> $out_path
 	count=0
 	sumEx=0
 	sumT=0.0
 	for ((i=1; i<2; i++)); do
-		sudo timeout 600  python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  2>>"error_log.txt"
+		python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  
 	done 
+
 
 done
 for s in "${benchmark_plus_3[@]}"; do
 	echo "processing $s in $path"
-	echo -n $s" & " >> $out_path
 	count=0
 	sumEx=0
 	sumT=0.0
 	for ((i=1; i<6; i++)); do
-		sudo timeout 600  python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  2>>"error_log.txt"
+		python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  
 	done 
+
 
 done
 for s in "${benchmark_plus_4[@]}"; do
 	echo "processing $s in $path"
-	echo -n $s" & " >> $out_path
 	count=0
 	sumEx=0
 	sumT=0.0
 	for ((i=1; i<2; i++)); do
-		sudo timeout 600  python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  2>>"error_log.txt"
+		python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  
 	done 
+
 
 done
 
@@ -153,18 +152,18 @@ fg_mpg_ite2
 )
 
 path="benchmarks/CLIA_Track_IF/"
-
-echo "\nCategory: limitedIf" >> "result.txt"
+echo "" >> "result.txt"
+echo "Category: limitedIf" >> "result.txt"
 
 for s in "${benchmark_if[@]}"; do
 	echo "processing $s in $path"
-	echo -n $s" & " >> $out_path
 	count=0
 	sumEx=0
 	sumT=0.0
 	for ((i=1; i<2; i++)); do
-		sudo timeout 600  python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  2>>"error_log.txt"
+		python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  
 	done 
+
 
 done
 
@@ -224,11 +223,11 @@ echo "Category: limitedConst" >> $out_path
 
 for s in "${benchmark_const[@]}"; do
 	echo "processing $s in $path"
-	echo -n $s" & " >> $out_path
 	count=0
 	sumEx=0
 	sumT=0.0
 	for ((i=1; i<2; i++)); do
-		sudo timeout 600  python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  2>>"error_log.txt"
+		python run.py $path$s"/grammar.sl" $path$s"/example"$i".txt"  
 	done 
+
 done
